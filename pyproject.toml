@@ -1,0 +1,42 @@
+[project]
+name = "becas-opencode"
+version = "0.1.0"
+description = "Consolidación de los padrones de becas de datos.gob.mx"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = ["curl-cffi>=0.13,<1", "requests>=2.32,<3"]
+
+[project.scripts]
+becas = "becas.cli:main"
+
+[dependency-groups]
+dev = [
+    "mypy>=1.10",
+    "pytest>=8",
+    "ruff>=0.8",
+    "types-requests>=2.32",
+]
+
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/becas"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+src = ["src", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+
+[tool.mypy]
+python_version = "3.11"
+strict = true
+files = ["src"]

@@ -1,0 +1,23 @@
+# Entorno virtual
+/.venv/
+
+# Python y herramientas de desarrollo
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+
+# Artefactos de empaquetado
+/build/
+/dist/
+*.egg-info/
+
+# Archivos temporales
+*.tmp
+
+# Datos descargados, intermedios y entregables regenerables
+/data/
+
+# Archivos preparados para publicar en Hugging Face
+/huggingface/
