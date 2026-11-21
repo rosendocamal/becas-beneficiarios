@@ -49,7 +49,7 @@ El programa guarda los resultados en estas rutas:
 | `data/entregables/db/becas_global.db` | Base SQLite con todos los años. |
 | `data/entregables/db/por_anio/becas_<año>.db` | Base SQLite independiente por año. |
 
-En esa ejecución, la base global ocupó 24.32 GiB y las ocho bases anuales sumaron 24.14 GiB. El tamaño puede variar según la versión de SQLite y el sistema.
+En esa ejecución, la base global ocupó 26.1 GiB y las ocho bases anuales sumaron 24.14 GiB. El tamaño puede variar según la versión de SQLite y el sistema.
 
 ```mermaid
 erDiagram
